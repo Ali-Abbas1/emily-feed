@@ -11,12 +11,12 @@ import button8 from '../images/Vector8.svg'
 const Sidebar = () => {
   return (
     <>
-    <div className='lg:flex hidden font-Urbanist '>
+    <div className='lg:block hidden font-Urbanist '>
       <div className='sticky top-0 left-0 bg-white lg:w-[290px] flex flex-col lg:pt-[40px] space-y-48'>
           <div className='logo flex justify-end'>
               <img src={logo} alt="logo"/>
           </div>
-                    <div className='sidebar-btns flex flex-col items-end space-y-10'>
+                    <div className='sidebar-btns flex flex-col items-end space-y-10 pr-[20px]'>
                                   <button><img src={button1} /></button>
                                   <button><img src={button2} /></button>
                                   <button><img src={button3}/></button>
