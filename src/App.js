@@ -4,14 +4,14 @@ import SideBar2 from './components/SideBar2';
 
 function App() {
   return (
-    <div className="App flex relative mx-auto container">
-    <div className='relative'>
+    <div className="App flex relative mx-auto">
+    <div className="container hidden lg:block">
     <Sidebar/>
     </div>
-    <div className=''>
+    <div className='w-[200%]'>
     <Feed/>
     </div>
-    <div className=''>
+    <div className='container'>
     <SideBar2/>
     </div>
     </div>

@@ -11,8 +11,8 @@ import button8 from '../images/Vector8.svg'
 const Sidebar = () => {
   return (
     <>
-    <div className='lg:block hidden font-Urbanist '>
-      <div className='sticky top-0 left-0 bg-white lg:w-[290px] flex flex-col lg:pt-[40px] space-y-48'>
+    <div className='sticky mx-auto top-0 left-0 lg:block hidden font-Urbanist '>
+      <div className=' bg-white lg:w-[290px] flex flex-col lg:pt-[40px] space-y-48'>
           <div className='logo flex justify-end'>
               <img src={logo} alt="logo"/>
           </div>
