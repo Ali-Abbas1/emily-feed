@@ -307,7 +307,7 @@ const Feed = () => {
                 </div>
                 <h2 className="font-semibold text-base leading-[24px]">{item.heading}</h2>
                 <p className="font-normal text-sm md:text-base leading-[21px]">{item.para}</p>
-                <ReactPlayer url={item.url} playing={false} controls={true} width="310px"  className="pb-2" />
+                <ReactPlayer url={item.url} playing={false} controls={true} width="310px"  className="pb-2 mx-auto" />
                 <div className="content-footer text-[#525252] justify-between flex text-sm font-normal w-[110%] ">
                   <div className="reading flex flex-row items-start space-x-1 text-[10px] sm:text-[10px] w-[60%] sm:w-[59%] lg:w-[50%]">
                     <p className="flex ">
@@ -443,7 +443,7 @@ const Feed = () => {
                 </div>
                 <h2 className="font-semibold w-[85%] text-base leading-[24px]">{item.heading}</h2>
                 <p className="font-normal text-sm md:text-base leading-[21px]">{item.para}</p>
-                <ReactPlayer controls={true} url={item.url} playing={false} width="295px" className="pb-2"/>
+                <ReactPlayer controls={true} url={item.url} playing={false} width="295px" className="pb-2 mx-auto"/>
                 <div className="content-footer mt-[50px] text-[#525252] flex justify-between text-sm font-normal w-[100%] lg:w-[92%]">
                   <div className="reading flex flex-row space-x-2 text-[10px] w-[63%] lg:w-[50%] ">
                     <p className="flex text-center items-center">
