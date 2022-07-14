@@ -11,7 +11,7 @@ import button8 from '../images/Vector8.svg'
 const Sidebar = () => {
   return (
     <>
-    <div className='sticky mx-auto top-0 left-0 lg:block hidden font-Urbanist '>
+    <div className='sticky mx-auto top-0 left-0 lg:block hidden font-Urbanist pb-[50px] border-r-[1px] border-gray-200'>
       <div className=' bg-white lg:w-[290px] flex flex-col lg:pt-[40px] space-y-48'>
           <div className='logo flex justify-end'>
               <img src={logo} alt="logo"/>
@@ -24,7 +24,7 @@ const Sidebar = () => {
                                   <button><img src={button5}/></button>
                                   <button><img src={button6}/></button>
                                   <button><img src={button7}/></button>
-                                  <button><img src={button8}/></button>
+                                  <button className='pr-[4px]'><img src={button8}/></button>
                     </div>
         </div>
   </div>
