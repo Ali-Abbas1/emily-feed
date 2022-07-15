@@ -22,7 +22,7 @@ const SideBar2 = () => {
   return (
     <>
     
-      <div className="hidden mx-auto sticky font-Urbanist lg:block top-0 right-0 bg-white min-h-screen flex-wrap lg:w-[530px] pb-[50px] border-l-[1px] border-gray-200">
+      <div className="hidden mx-auto sticky font-Urbanist lg:flex top-0 right-0 bg-white min-h-screen flex-wrap lg:w-[530px] pb-[50px] border-l-[1px] border-gray-200">
         <div className="content flex flex-col pt-[48px] space-x-1 w-[100%] pl-4">
           <div className="flex justify-between w-[53%]">
             <img src={profile} className="w-[40px] h-[40px]" />
@@ -92,12 +92,12 @@ const SideBar2 = () => {
             {Data.map((item, id) => (
               <>
                 <div className="flex items-center space-x-1 pt-[20px] px-1">
-                  <img alt="profile" src={item.image} />
-                  <p className=" text-base font-normal">{item.para}</p>
+                  <img alt="profile" src={item.image} className="hover:cursor-pointer" />
+                  <p className=" text-base font-normal hover:cursor-pointer ">{item.para}</p>
                   <img alt="bluetick" src={ item.image2} />
                 </div>
-                <div className="w-[65%]">
-                  <h2 className=" text-lg font-semibold pt-[9.5px]">
+                <div className="w-[50%]">
+                  <h2 className=" text-lg font-semibold pt-[9.5px] hover:cursor-pointer">
                    {item.heading}
                   </h2>
                 </div>
@@ -111,10 +111,10 @@ const SideBar2 = () => {
            { Data3.map((item2) => (
             <div className="flex justify-between w-[330px] items-end">
             <div className="flex space-y-5 items-end justify-between">
-            <img src={item2.image} className="h-[40px] w-[40px]" />
+            <img src={item2.image} className="h-[40px] w-[40px] hover:cursor-pointer" />
             <div className="pl-1">
               <div className="flex items-center">
-                <h2 className=" text-base font-medium">{item2.heading}</h2>
+                <h2 className=" text-base font-medium hover:cursor-pointer">{item2.heading}</h2>
                 <img alt="bluetick" src={item2.image2}/>
               </div>
               <p className=" text-xs font-normal">{item2.desc}</p>
@@ -134,28 +134,28 @@ const SideBar2 = () => {
           <hr className="mx-auto mt-6 w-[90%]" />
           <div className="footer-content-div mt-5 flex justify-between w-[335px]">
             <div className="flex justify-between w-[45%]">
-            <img src={calm} />
-            <h1 className=" text-lg font-semibold flex items-center">Calm </h1>
-            <p className="flex items-center text-xs font-normal text-gray-400">
+            <img src={calm} className="hover:cursor-pointer"/>
+            <h1 className=" text-lg font-semibold flex items-center hover:cursor-pointer">Calm </h1>
+            <p className="flex items-center text-xs font-normal text-gray-400 hover:cursor-pointer">
         Sponsored
             </p>
             </div>
             <span className="pl-7 bg-gradient-to-br from-pink-600 to-purple-500 text-transparent bg-clip-text font-medium">
-              <button className="w-[109px] h-[34px] border-[0.75px] border-gray-300 rounded-lg text-center items-center text-[13px] font-medium">
+              <button className="w-[109px] h-[34px] border-[0.75px] border-gray-300 rounded-lg text-center items-center text-[13px] font-medium hover:cursor-pointer">
                 Learn more
               </button>
             </span>
           </div>
           <div className="max-w-[100%]">
-          <img src={calm2} className="mt-5 w-[342px] "/>
+          <img src={calm2} className="mt-5 w-[338px] hover:cursor-pointer "/>
           </div>
-          <p className=" text-lg font-semibold w-[310px] mt-[16px]">Think about what love entails and what it means to love someone. Got it? Well, that’s kindness.</p>
+          <p className=" text-lg font-semibold w-[332px] mt-[16px]">Think about what love entails and what it means to love someone. Got it? Well, that’s kindness.</p>
             <div className="flex justify-end w-[340px] space-x-4 items-center mt-4">
-                <img src={share}/>
+                <img src={share} className="hover:cursor-pointer"/>
                 <button className="text-sm font-medium text-gray-400 flex items-center">Share</button>
-                <img src={dots}/>
+                <img src={dots} className="hover:cursor-pointer self-center"/>
             </div>
-            <hr className="mt-[25px] w-[68%] h-1"/>
+            <hr className="mt-[25px] w-[68%] h-[1px]"/>
         </div>
       </div>
     </>

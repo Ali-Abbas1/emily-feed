@@ -44,8 +44,8 @@ const Feed = () => {
   }
   return (
     <>
-    <button onClick={() => handleModal()} className={`${show ? "block" : "hidden"} fixed top-[547px] sm:top-[540px] md:top-[650px] lg:top-[300px] sm:right-[44px] md:right-[65px] right-[40px] w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] z-50`}><img src={btn} /></button>
-    <div className={ `${!modal ? "flex flex-col ": "hidden"} bg-white fixed top-[480px] sm:top-[680px] md:top-[700px] lg:top-[250px] right-[10px]  z-50`}>
+    <button onClick={() => handleModal()} className={`${show ? "block" : "hidden"} fixed top-[260px] sm:top-[540px] md:top-[650px] lg:top-[300px] sm:right-[44px] md:right-[65px] right-[20px] w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] z-50`}><img src={btn} /></button>
+    <div className={ `${!modal ? "flex flex-col ": "hidden"} bg-white fixed top-[240px] sm:top-[680px] md:top-[700px] lg:top-[250px] right-[10px]  z-50 shadow-2xl`}>
       <div className="w-[395px] h-[500px] z-50">
        <div className=" mx-auto w-[395px] h-[56px] justify-between px-[23px] rounded-t-xl items-center bg-gradient-to-br from-pink-600 to-purple-500 flex">
         <div className="flex space-x-2">
@@ -98,10 +98,11 @@ const Feed = () => {
             </div>
             {MenuData.map((item) => (
               <>
-              <div className="relative flex mt-4 mx-auto items-center justify-between w-[240px]">
+            <div className="relative flex mt-4 mx-auto items-center space-y-2 justify-between w-[320px]">
+            <div className="flex w-[55%] items-center justify-start">
             <img src={item.image} />
             <img src={online} className="absolute top-[25px] left-[22px]"/>
-            <div className="">
+            <div className="pl-[8px]">
                   <div className="flex items-center">
                   <p className="profile-name text-xs font-normal">
                     {item.heading}
@@ -109,6 +110,7 @@ const Feed = () => {
                   <img src={item.image2} className="h-[15px] w-[15px]"/>
                   </div> 
                   <p className=" text-xs font-light">{item.desc}</p>                      
+            </div>
             </div>
             <span className="pl-[20px] bg-gradient-to-br from-pink-600 to-purple-500 text-transparent bg-clip-text">
               <button className="border-[0.75px] border-gray-300 rounded-2xl w-[78px] h-[34px] text-trasparent bg-clip-text font-medium text-[10px]">{item.btn}</button></span>
@@ -120,13 +122,13 @@ const Feed = () => {
     </div>
     <div className="flex mx-auto sm:hidden w-[100%] h-[86px] items-center align-middle text-center my-auto fixed bottom-0 left-0 right-0 z-20 bg-white">
     <div className="flex flex-row text-xs leading-[150%] justify-around mx-auto text-center items-center w-[100%] bg-gradient-to-br from-pink-600 to-purple-500 text-transparent bg-clip-text">
-    <button><img src={button1} className="text-center mx-auto"/>Home</button>
-    <button><img src={button2} className="text-center mx-auto"/>Posts</button>
-    <button><img src={button3} className="text-center mx-auto"/>Videos</button>
-    <button><img src={button4} className="text-center mx-auto"/>Podcasts</button>
+    <button><img src={button1} className="text-center mx-auto hover:cursor-pointer"/>Home</button>
+    <button><img src={button2} className="text-center mx-auto hover:cursor-pointer"/>Posts</button>
+    <button><img src={button3} className="text-center mx-auto hover:cursor-pointer"/>Videos</button>
+    <button><img src={button4} className="text-center mx-auto hover:cursor-pointer"/>Podcasts</button>
     <button><svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-400 text-center"
+          className="h-6 w-6 text-gray-400 text-center hover:cursor-pointer"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -140,7 +142,7 @@ const Feed = () => {
         </svg>Menu</button>
     </div>
     </div>
-    <div className=" mx-auto container relative navbar-Ipad flex justify-between mt-[40px] w-[126%] md:w-[100%]">
+    <div className=" mx-auto container relative navbar-Ipad flex justify-between mt-[40px] w-[133%] md:w-[100%]">
     <button><img src={logo} className="pl-[30px] block md:hidden"/></button>
     {!Open ? 
        (
@@ -263,23 +265,23 @@ const Feed = () => {
                 </div>
                 <h2 className="font-semibold mx-auto w-[85%] text-base leading-[24px]">{item.heading}</h2>
                 <p className=" font-normal w-[85%] mx-auto text-sm md:text-base leading-[21px] ">{item.para}</p>
-                <video controls autoPlay className=" w-[90%] md:w-[563px] lg:w-[480px] sm:w-[480px] mx-auto pb-2 rounded-xl">
+                <video controls autoPlay className=" w-[90%] md:w-[88%] lg:w-[480px] sm:w-[480px] mx-auto pb-2 rounded-xl pl-[15px] sm:pl-0 ">
                   <source src= { item.url } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
-                <div className="content-footer mt-[50px] text-[#525252] flex justify-between font-normal w-[99%]">
-                  <div className="reading flex flex-row space-x-1 text-[11px] sm:text-[12px] w-[55%] sm:w-[50%] justify-center ">
+                <div className="content-footer mt-[50px] text-[#525252] flex justify-between font-normal w-[99%] lg:w-[94%]">
+                  <div className="reading flex flex-row space-x-1 text-[11px] sm:text-[12px] w-[55%] sm:w-[50%] md:w-[57%] lg:w-[56%] justify-center ">
                     <p className="flex flex-row ">
                       {item.footerContent}
                     </p>
                     <p className=" bg-[#F5F5F5] rounded-lg ml-[10px] py-[4px] px-[12px] mt-[-4px]">{item.paragraph2}</p>
                   </div>
-                  <div className="ctn-footer-btns flex flex-row justify-between w-[34%] sm:w-[25%] md:w-[44%] lg:w-[44%] xl:w-[35%] items-center ">
+                  <div className="ctn-footer-btns flex flex-row justify-between w-[34%] sm:w-[25%] md:w-[44%] lg:w-[44%] xl:w-[38%] items-center ">
                     <div className="share flex flex-row space-x-1 ">
                       {" "}
                       <img src={item.shareButton} className="w-[11px] h-[13.98px] self-center" />
                       <button className=" hidden md:flex w-[11px] h-[13.98px] text-[11px] items-center">{item.shareButtonName}</button>{" "}
                     </div>
-                    <div className="post flex flex-row space-x-1 ml-[0px] lg:w-[37%] md:w-[21%] lg:pl-[9px] items-center">
+                    <div className="post flex flex-row space-x-1 ml-[0px] lg:w-[37%] md:w-[28%] lg:pl-[9px] items-center">
                       {" "}
                       <img src={item.saveButton} className="w-[8px] h-[14px]" />{" "}
                       <button className="save-post hidden text-[11px] md:flex md:flex-row w-[47px] items-center ">
@@ -317,20 +319,20 @@ const Feed = () => {
                   }}>
                 <ReactPlayer url={item.url} playing={false} controls={true} width="100%"  className="pb-2 mx-auto max-w-[150%]"  />
                   </div>
-                <div className="content-footer text-[#525252] justify-between flex text-sm font-normal md:w-[107%] lg:w-[104%] ">
-                  <div className="reading flex flex-row items-start space-x-1 text-[11px] sm:text-[12px] w-[60%] sm:w-[59%] lg:w-[50%] ">
+                <div className="content-footer text-[#525252] justify-between flex text-sm font-normal md:w-[110%] lg:w-[104%] items-center ">
+                  <div className="reading flex flex-row items-start space-x-1 text-[11px] sm:text-[12px] w-[60%] sm:w-[59%] md:w-[56%] lg:w-[50%] ">
                     <p className="flex ">
                       {item.footerContent}
                     </p>
-                    <p className="bg-[#F5F5F5] rounded-lg ml-[10px] py-[4px] px-[12px] mt-[-3px]">{item.paragraph2}</p>
+                    <p className="bg-[#F5F5F5] rounded-lg ml-[10px] py-[4px] px-[12px] mt-[-4px]">{item.paragraph2}</p>
                   </div>
-                  <div className="ctn-footer-btns space-x-6 flex flex-row justify-between w-[37%] sm:w-[26%] md:w-[42%] lg:w-[42%] xl:w-[42%] items-center">                     
+                  <div className="ctn-footer-btns space-x-6 flex flex-row justify-between w-[37%] sm:w-[26%] md:w-[44%] lg:w-[42%] xl:w-[42%] items-center">                     
                       <div className="share flex text-[11px] w-[50%] md:w-[14%] justify-between lg:w-[26px]  ">
                       <img src={item.shareButton} className="w-[12px] h-[14px]" />
                       <button className="share hidden md:flex w-[11px] h-[14px] items-center">{item.shareButtonName}</button>                                                        
                       </div>
-                      <div className="post flex text-[11px] w-[50%] md:w-[30%] lg:w-[76px] ml-[0px] justify-between lg:pl-[15px] ">
-                      <img src={item.saveButton} className="w-[12px] h-[14px] self-center" />
+                      <div className="post flex text-[11px] w-[50%] md:w-[36%] lg:w-[80px] ml-[0px] md:pl-[5px] justify-between lg:pl-[15px] ">
+                      <img src={item.saveButton} className="w-[9px] h-[14px] self-center" />
                       <button className="save-post hidden md:flex text-[11px] md:flex-row w-[53px] h-[14px] items-center ">
                         {item.saveButtonName}
                       </button>
@@ -364,13 +366,13 @@ const Feed = () => {
                     </p>
                     <p className="bg-[#F5F5F5] rounded-lg ml-[10px] py-[4px] px-[12px] mt-[-4px]">{item.paragraph2}</p>
                   </div>
-                  <div className="ctn-footer-btns flex flex-row justify-between w-[34%] sm:w-[25%] md:w-[44%] lg:w-[44%] xl:w-[39%] items-center ">
+                  <div className="ctn-footer-btns flex flex-row justify-between w-[34%] sm:w-[25%] md:w-[50%] lg:w-[44%] xl:w-[39%] items-center ">
                     <div className="share flex flex-row space-x-1 ">
                       {" "}
                       <img src={item.shareButton} className="w-[11px] h-[13.98px]" />
                       <button className=" hidden md:flex w-[11px] h-[13.98px] text-[11px] items-center">{item.shareButtonName}</button>{" "}
                     </div>
-                    <div className="post flex flex-row space-x-1 ml-[0px] lg:pl-[30px]">
+                    <div className="post flex flex-row space-x-1 ml-[0px] md:pl-[18px] lg:pl-[30px]">
                       <img src={item.saveButton} className="w-[11px] h-[14px] self-center" />{" "}
                       <button className="save-post hidden text-[11px] md:flex md:flex-row w-[57px] items-center">
                         {item.saveButtonName}
@@ -404,13 +406,13 @@ const Feed = () => {
                       <button className="border-[0.75px] border-gray-300 rounded-[38px] text-[12px] w-[96px] sm:font-semibold md:text-[14px] md:w-[134px] h-[41px] text-trasparent bg-clip-text font-medium">{item.followbtn}</button>
                       </div>
                 </div>
-                <h2 className="font-semibold pl-[28px] text-base leading-[24px]">{item.heading}</h2>
-                <p className="font-normal pl-[28px] text-sm md:text-base leading-[21px] ">{item.para}</p>
-                <video controls autoPlay className="mx-auto max-w-[507px] 2xl:w-[100%] rounded-t-2xl">
+                <h2 className="font-semibold md:pl-[28px] text-base leading-[24px] w-[133%] sm:w-[131%] md:w-[87%] xl:w-[88%] ">{item.heading}</h2>
+                <p className="font-normal md:pl-[28px] text-sm md:text-base leading-[21px] w-[133%] sm:w-[131%] md:w-[87%] xl:w-[92%]">{item.para}</p>
+                <video controls autoPlay className="md:pl-[20px] lg:pl-[12px] lg:mx-auto max-w-[136%] sm:max-w-[136%] md:max-w-[95%] 2xl:w-[100%] ">
                   <source src= { item.url } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
-                <div className="content-footer mt-[50px] text-[#525252] flex justify-between text-sm font-normal w-[140%] md:w-[100%] lg:w-[97%]">
-                  <div className="reading flex flex-row space-x-2 text-[11px] sm:text-[12px] w-[63%] lg:w-[50%] lg:pl-[20px] ">
+                <div className="content-footer mt-[50px] text-[#525252] flex justify-between text-sm font-normal w-[140%] md:w-[100%] lg:w-[102%]">
+                  <div className="reading flex flex-row space-x-2 text-[11px] sm:text-[12px] w-[63%] lg:w-[50%] lg:pl-[27px] ">
                     <p className="flex text-center items-center">
                       {item.footerContent}
                     </p>
@@ -449,19 +451,19 @@ const Feed = () => {
                       <button className="border-[0.75px] border-gray-300 rounded-[38px] text-[12px] w-[96px] md:text-[14px] md:w-[134px] h-[41px] text-trasparent bg-clip-text font-medium">{item.followbtn}</button>
                       </div>
                 </div>
-                <h2 className="font-semibold text-base lg:pl-[28px] leading-[24px] ">{item.heading}</h2>
-                <p className="font-normal text-sm md:text-base lg:pl-[28px] leading-[21px]">{item.para}</p>
-                <div className="" style={{  
+                <h2 className="font-semibold text-base lg:pl-[28px] leading-[24px] w-[133%] sm:w-[131%] md:w-[87%] xl:w-[88%]">{item.heading}</h2>
+                <p className="font-normal text-sm md:text-base lg:pl-[28px] leading-[21px] w-[133%] sm:w-[131%] md:w-[87%] xl:w-[92%]">{item.para}</p>
+                <div className="w-[135%] sm:w-[138%] md:w-[99%] lg:w-[92%] lg:mx-auto sm:ml-[-7px] md:ml-0 " style={{  
                   backgroundImage: "url(" + "https://cdn.pixabay.com/photo/2022/02/07/06/41/vietnam-6998583_960_720.jpg" + ")",
                   backgroundPosition: 'center',
-                  backgroundSize: '90%',
+                  backgroundSize: '100%',
                   backgroundRepeat: 'no-repeat',
-                  borderRadius: "8px"
+                  borderRadius: "20px"
                 }}>
-                <ReactPlayer controls={true} url={item.url} playing={false} width="420px" className="mb-4 mx-auto" />
+                <ReactPlayer controls={true} url={item.url} playing={false} width="300px" className="pb-4 sm:pl-[20px] md:pl-0 mx-auto" />
                 </div>
                 <div className="content-footer mt-[50px] text-[#525252] flex justify-between text-sm font-normal w-[140%] md:w-[100%] lg:w-[97%]">
-                  <div className="reading flex flex-row space-x-2 text-[11px] sm:text-[12px] w-[63%] lg:w-[50%] lg:pl-[20px] ">
+                  <div className="reading flex flex-row space-x-2 text-[11px] sm:text-[12px] w-[63%] lg:w-[65%] lg:pl-[37px] ">
                     <p className="flex text-center items-center">
                       {item.footerContent}
                     </p>
@@ -473,7 +475,7 @@ const Feed = () => {
                       <img src={item.shareButton} className="w-[11px] h-[13.98px]" />
                       <button className=" hidden md:flex w-[11px] h-[13.98px] text-[11px] items-center">{item.shareButtonName}</button>{" "}
                     </div>
-                    <div className="post flex flex-row space-x-1 ml-[0px] lg:pl-[20px] items-center">
+                    <div className="post flex flex-row space-x-1 ml-[0px] md:pl-[15px] lg:pl-[20px] items-center">
                       {" "}
                       <img src={item.saveButton} className="w-[11px] h-[14px]" />{" "}
                       <button className="save-post hidden text-[11px] md:flex md:flex-row w-[57px] items-center ">
@@ -489,7 +491,7 @@ const Feed = () => {
           </>
         ) : (
           <>
-            <div className="mx-auto font-Urbanist w-[138%] md:w-[84%] mt-[17px] flex-wrap flex ">
+            <div className="mx-auto font-Urbanist w-[138%] md:w-[84%] mt-[25px] flex-wrap flex ">
               <div className="content space-y-2">
                 <div className="Profile-desc flex flex-row justify-between w-[97%] sm:w-[100%] items-center space-x-1">
                 <div className="flex items-center space-x-1">
@@ -506,8 +508,8 @@ const Feed = () => {
                 <h2 className=" font-semibold w-[85%] text-base leading-[24px]">{item.heading}</h2>
                 <p className="font-normal text-sm md:text-base leading-[21px]">{item.para}</p>
                 <img src={item.url} className="pb-2 w-[100%] mx-auto " />
-                <div className="content-footer mt-[50px] text-[#525252] flex justify-between text-sm font-normal w-[92%] lg:w-[97%]">
-                  <div className="reading flex flex-row space-x-2 text-[11px] sm:text-[12px] w-[63%] lg:w-[50%]">
+                <div className="content-footer mt-[50px] text-[#525252] flex justify-between text-sm font-normal w-[92%] md:w-[103%] lg:w-[97%]">
+                  <div className="reading flex flex-row space-x-2 text-[11px] sm:text-[12px] w-[68%] md:w-[63%] lg:w-[50%]">
                     <p className="flex text-center items-center">
                       {item.footerContent}
                     </p>
@@ -518,14 +520,13 @@ const Feed = () => {
                       <img src={item.shareButton} className="w-[11px] h-[13px]" />
                       <button className="share hidden md:flex w-[11px] h-[14px] items-center">{item.shareButtonName}</button>
                     </div>
-                    <div className="flex flex-row space-x-2 text-[11px] ml-[0px] lg:pl-[20px]">
+                    <div className="flex flex-row space-x-2 text-[11px] ml-[0px] lg:pl-[15px] md:w-[32%] lg:w-[45%] ">
                       <img src={item.saveButton} className="w-[11px] h-[13px]" />
                       <button className="save-post hidden md:flex md:flex-row w-[57px] h-[15px] items-center ">
                         {item.saveButtonName}
                       </button>
                     </div>
                     <img src={item.dotImage} className="w-[20px] h-[15px] flex items-center align-middle " />
-            
                   </div>
                 </div>
               </div>

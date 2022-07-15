@@ -8,7 +8,7 @@ function App() {
     <div className="container hidden lg:block">
     <Sidebar/>
     </div>
-    <div className='w-[200%]  '>
+    <div className='lg:w-[200%] w-[76%]  '>
     <Feed/>
     </div>
     <div className='container hidden lg:block'>
